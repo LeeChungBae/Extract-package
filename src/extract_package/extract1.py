@@ -4,7 +4,7 @@ import requests
 import os
 import pandas as pd
 
-SAVE_PATH = '../extract_result'             # relative path from 'team_repo/Airflow_dags'
+SAVE_PATH = '~/home/nishtala/code/team_repo/extract_result'
 
 def get_key():
     key = os.getenv("MOVIE_API_KEY")        # need to add how-to in README
