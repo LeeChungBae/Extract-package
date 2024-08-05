@@ -13,7 +13,7 @@ PLAYDATA 데이터엔지니어링 부트캠프 32기 팀 LeeChungBae의 extract_
 
 ## 모듈별 기능
 - `extract_package.py`:
-본 branch에서는 아직 개발되지 않은 기능입니다.
+본 branch에서는 개발중인 기능입니다.
 
 영화진흥위원회 오픈 API 기능을 통해 지정한 년도의 박스오피스 데이터를 `request`받아 저장하는 모듈입니다.
 
