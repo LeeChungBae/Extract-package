@@ -26,5 +26,6 @@ def save_pq(dt="20120101", parq_path=SAVE_PATH):
     data = request(dt)
     data_list = data['boxOfficeResult']['dailyBoxOfficeList']
     df = pd.DataFrame(data_list)
+    df['load_dt'] = dt
     df.to_parquet(parq_path, partition_cols=['load_dt'])
     return df
