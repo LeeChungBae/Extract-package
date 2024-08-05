@@ -34,5 +34,5 @@ def list2df(dt="20120101"):
 
 def save2df(dt="20120101", parquet_path=SAVE_PATH):
     df = list2df(dt)
-    df['dt'] = f'{dt}'
+    df['load_dt'] = dt
     return df
