@@ -18,7 +18,7 @@ def gen_url(dt="20120101"):
 
 def req(dt="20120101"):
     url = gen_url(dt)
-    r= request.get(url)
+    r= requests.get(url)
     data = r.json()
     return data
 
