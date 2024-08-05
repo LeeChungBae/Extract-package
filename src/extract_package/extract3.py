@@ -14,9 +14,10 @@ def gen_url(dt="20120101"):
     base_url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json"
     key = get_key()
     url = f"{base_url}?key={key}&targetDt={dt}"
+    return url 
 
-def request(dt="20120101"):
-    url + gen_url(dt)
+def req(dt="20120101"):
+    url = gen_url(dt)
     r= request.get(url)
     data = r.json()
     return data
@@ -31,8 +32,7 @@ def list2df(dt="20120101"):
     df = pd.DataFrame(l)
     return df 
 
-def save2pq(dt="20120101", parquet_path=SAVE_PATH):
+def save2df(dt="20120101", parquet_path=SAVE_PATH):
     df = list2df(dt)
     df['dt'] = f'{dt}'
-    df.to_parquet(parquet_path, partition_cols=['dt'])
     return df
