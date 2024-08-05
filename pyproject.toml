@@ -5,7 +5,6 @@ description = "Default template for PDM package"
 authors = [
     {name = "NishNovae", email = "raecrowned@gmail.com"},
 ]
-dependencies = []
 dependencies = [
     "requests>=2.32.3",
     "pandas>=2.2.2",
