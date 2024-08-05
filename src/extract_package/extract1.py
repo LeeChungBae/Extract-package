@@ -4,7 +4,7 @@ import requests
 import os
 import pandas as pd
 
-SAVE_PATH = '~/home/nishtala/code/team_repo/extract_result'
+SAVE_PATH = '/home/nishtala/code/team_repo/extract_result'
 
 def get_key():
     key = os.getenv("MOVIE_API_KEY")        # need to add how-to in README
@@ -21,7 +21,7 @@ def request(dt="20120101"):
     data = r.json()
     return data
 
-def save_pq(dt="20120101", parq_path=SAVE_PATH)
+def save_pq(dt="20120101", parq_path=SAVE_PATH):
     data = request(dt)
     data_list = data['boxOfficeResult']['dailyBoxOfficeList']
     df = pd.DataFrame(data_list)
