@@ -3,10 +3,20 @@
 
 [metadata]
 groups = ["default"]
+<<<<<<< HEAD
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.2"
 content_hash = "sha256:711dc692bca897f76b8576d8326db98a8e684e250a74f2a819224f63019cadff"
 
+=======
+strategy = ["inherit_metadata"]
+lock_version = "4.5.0"
+content_hash = "sha256:711dc692bca897f76b8576d8326db98a8e684e250a74f2a819224f63019cadff"
+
+[[metadata.targets]]
+requires_python = ">=3.9"
+
+>>>>>>> dev/d2.0.0-sang
 [[package]]
 name = "certifi"
 version = "2024.7.4"
